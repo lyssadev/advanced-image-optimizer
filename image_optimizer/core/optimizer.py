@@ -40,7 +40,15 @@ class ImageOptimizer:
             exif_bytes = piexif.dump(piexif.load(input_path)) if self.preserve_metadata else None
 
             # Save the optimized image
-            img.save(output_path, format=self.output_format, quality=self.quality, optimize=True, exif=exif_bytes)
+            save_params = {
+                'format': self.output_format,
+                'quality': self.quality,
+                'optimize': True
+            }
+            if exif_bytes:
+                save_params['exif'] = exif_bytes
+            
+            img.save(output_path, **save_params)
 
     def _enhance_image(self, img):
         enhancer = ImageEnhance.Contrast(img)

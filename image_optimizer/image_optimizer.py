@@ -19,6 +19,10 @@ def main():
 
     args = parser.parse_args()
 
+    import logging
+
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    
     optimizer = ImageOptimizer(
         output_format=args.format,
         quality=args.quality,
