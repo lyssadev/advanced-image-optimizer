@@ -18,7 +18,7 @@ This is an advanced image optimization tool that can process single images or ba
 
 1. Clone this repository:
    ```
-   git clone https://github.com/ToolsPeople200/advanced-image-optimizer.git
+   git clone https://github.com/lyssadev/advanced-image-optimizer.git
    cd advanced-image-optimizer
    ```
 
