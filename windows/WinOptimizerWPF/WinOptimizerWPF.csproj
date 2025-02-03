@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+    <Version>3.0.0</Version>
+    <Authors>Advanced Image Optimizer Team</Authors>
+    <Company>Advanced Image Optimizer</Company>
+    <Product>Advanced Image Optimizer Pro</Product>
+    <Description>Professional image optimization and enhancement tool</Description>
+    <Copyright>Copyright © 2024</Copyright>
+    <PackageProjectUrl>https://github.com/yourusername/advanced-image-optimizer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yourusername/advanced-image-optimizer</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="optimizer.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="7.0.0" />
+  </ItemGroup>
+
+</Project> 
